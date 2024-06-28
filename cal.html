@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+        *{
+            background-color: skyblue;
+        }
+        .app-container{
+    /* background-color: red; */
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .input-box{
+            width: 200px;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+        .btn-action{
+            width:150px;
+            margin-top: 30px;
+            border-radius: 15px;
+            background-color: red;
+        }
+        .app-heading{
+            text-align: center;
+            color:white;
+        }
+        .text-result{
+            margin: 0;
+            padding:0;
+            font-size:30px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <!-- <fieldset> -->
+    <div class="app-container">
+        <h1 class="app-heading">Sum Of Two Numbers</h1>
+    <!-- Enter Number 1 : <br /> -->
+    <input type="text" class="input-box" id="num1" />
+
+    <!-- Enter Number 2 : <br /> -->
+    <input type="text" class="input-box" id="num2" />
+    
+
+    <p class="text-result" id="answer">Answer:</p>
+
+    <button type="button" class="btn-action" onclick="calculateSum()">
+        Calculate 
+    </button>
+    <button type="button" class="btn-action" onclick="resetSum()">
+        Reset 
+    </button>
+  </div>
+    <!-- </fieldset> -->
+    <script>
+      const inputBox1 = document.getElementById("num1");
+      const inputBox2 = document.getElementById("num2");
+      const answertText = document.getElementById("answer");
+
+      
+
+      function calculateSum() {
+        const val1 = parseInt(inputBox1.value);
+        const val2 = parseInt(inputBox1.value);
+        const sum = val1 + val2;
+        answertText.innerText = `Answer : ${sum}`;
+      }
+
+      function resetSum() {
+        inputBox1.value = " ";
+        inputBox2.value = " ";
+        answertText.innerText = `Answer :`;
+      }
+    </script>
+  </body>
+</html>
