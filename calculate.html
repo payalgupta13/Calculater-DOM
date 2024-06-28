@@ -36,7 +36,22 @@
     </div>
 
     <script>
-        
+         const inputBox1 = document.getElementById("num1");
+         const inputBox2 = document.getElementById("num2");
+         const answertText = document.getElementById("answer");
+
+         function calculateSum() {
+         const val1 = parseInt(inputBox1.value);
+         const val2 = parseInt(inputBox1.value);
+         const sum = val1 + val2;
+         answertText.innerText = `Answer : ${sum}`;
+    }
+
+        function resetSum() {
+        inputBox1.value = " ";
+        inputBox2.value = " ";
+        answertText.innerText = `Answer :`;
+    }
     </script>
 </body>
 </html>
