@@ -9,7 +9,6 @@
             background-color: skyblue;
         }
         .app-container{
-            /* background-color: red; */
             display:flex;
             flex-direction: column;
             justify-content: center;
@@ -37,7 +36,7 @@
     </style>
 </head>
 <body>
-    <!-- <fieldset> -->
+    
     <div class="app-container">
         <h1 class="app-heading">Sum Of Two Numbers</h1>
         <input type="text" class="input-box" id="input-num1"/>
@@ -48,13 +47,10 @@
             <button type="button" class="btn-action" onclick="calSum()">
                 Calculate
             </button>
-            <!-- <button type="button" class="btn-action" onclick="calSum()"> -->
-                <!-- Reset -->
-            <!-- </button> -->
         </div>
 
     </div>
-    <!-- </fieldset> -->
+
     <script>
         function calSum()
         {
@@ -65,7 +61,7 @@
 
             const resultElement = document.getElementById("text-result")
 
-            resultElement.innerText = 'Sum: ${sum}'
+            resultElement.innerText = `Sum: ${sum}`
         }
 
         function reset(){
